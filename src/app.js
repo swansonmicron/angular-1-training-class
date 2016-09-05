@@ -1,8 +1,8 @@
 angular
   .module('app', [])
-  .controller('appController', appController);
+  .controller('AppController', AppController);
 
-function appController($scope) {
+function AppController($scope) {
 
   $scope.title = 'List Page';
   
