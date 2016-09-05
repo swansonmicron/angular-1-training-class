@@ -8,6 +8,7 @@ angular.module('app', [])
     {
       id: 0,
       name: 'Luke Skywalker',
+      imageUrl: 'images/luke.png',
       power: 9000,
       affiliations: ['Jedi', 'Rebels'],
       light: true
