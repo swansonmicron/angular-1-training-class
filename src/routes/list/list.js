@@ -8,7 +8,7 @@ angular
 
 function listConfig($routeProvider) {
   $routeProvider
-    .when('/list', {
+    .when('/', {
       controller: ListController,
       templateUrl: 'src/routes/list/list.tpl.html'
     });

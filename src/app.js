@@ -8,9 +8,10 @@ angular
   .config(appConfig)
   .controller('AppController', AppController);
 
-function appConfig($routeProvider) {
+function appConfig($routeProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
   $routeProvider
-    .otherwise('/list');
+    .otherwise('/');
 }
 
 function AppController($scope, heroService) {
