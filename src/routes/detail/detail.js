@@ -6,8 +6,12 @@ angular
   .controller('DetailController', DetailController);
 
 
-function detailConfig() {
-
+function detailConfig($routeProvider) {
+  $routeProvider
+    .when('/detail', {
+      controller: DetailController,
+      templateUrl: 'src/routes/detail/detail.tpl.html'
+    });
 }
 
 function DetailController() {

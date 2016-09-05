@@ -1,13 +1,16 @@
 angular
   .module('app', [
     'hero',
-    'ngRoute'
+    'ngRoute',
+    'list',
+    'detail'
   ])
   .config(appConfig)
   .controller('AppController', AppController);
 
 function appConfig($routeProvider) {
-
+  $routeProvider
+    .otherwise('/list');
 }
 
 function AppController($scope, heroService) {
