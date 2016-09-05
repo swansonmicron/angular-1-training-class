@@ -1,10 +1,10 @@
 angular
-  .module('app', [])
+  .module('app', ['hero'])
   .controller('appController', appController);
 
 
-function appController($scope) {
-
+function appController($scope, heroService) {
+  console.log(heroService);
   $scope.title = 'List Page';
   
   $scope.heroes = [
