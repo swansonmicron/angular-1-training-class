@@ -1,16 +1,13 @@
 angular
   .module('app', [
-      'hero',
-      'ngRoute'
-    ]
-  )
+    'hero',
+    'ngRoute'
+  ])
   .config(appConfig)
-  .controller('appController', AppController);
+  .controller('AppController', AppController);
 
 function appConfig($routeProvider) {
-  $routeProvider.otherwise({
-    redirectTo: '/'
-  });
+
 }
 
 function AppController($scope, heroService) {

@@ -1,9 +1,11 @@
 angular
-  .module('list', ['ngRoute'])
+  .module('list', [
+    'ngRoute'
+  ])
   .config(listConfig)
   .controller('ListController', ListController);
 
-function listConfig() {
+function listConfig($routeProvider) {
 
 }
 
