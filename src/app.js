@@ -1,9 +1,9 @@
 angular
   .module('app', ['hero'])
-  .controller('appController', appController);
+  .controller('AppController', AppController);
 
 
-function appController($scope, heroService) {
+function AppController($scope, heroService) {
   $scope.title = 'List Page';
   
   $scope.heroes = heroService.getAll();
