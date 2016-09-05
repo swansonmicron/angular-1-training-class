@@ -1,6 +1,7 @@
 angular
   .module('detail', [
-    'ngRoute'
+    'ngRoute',
+    'hero'
   ])
   .config(detailConfig)
   .controller('DetailController', DetailController);
@@ -8,12 +9,17 @@ angular
 
 function detailConfig($routeProvider) {
   $routeProvider
-    .when('/detail', {
+    .when('/detail/:id', {
       controller: DetailController,
       templateUrl: 'src/routes/detail/detail.tpl.html'
     });
 }
 
-function DetailController() {
+function DetailController($scope, $routeParams, heroService) {
+  
+  $scope.heroId = parseInt($routeParams.id);
+
+  // get hero from service
+  $scope.hero = heroService.get($scope.heroId);
 
 }

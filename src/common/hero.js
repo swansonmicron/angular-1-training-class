@@ -56,12 +56,20 @@ function heroService() {
   ];
 
   var service = {
-    getAll: getAll
+    getAll: getAll,
+    get: get,
   };
 
   function getAll() {
     console.log('hero::heroService::getAll');
     return heroes;
+  }
+
+  function get(id) {
+    var h = heroes.filter(function(hero) {
+      return hero.id === id;
+    });
+    return h[0];
   }
 
   return service;
