@@ -1,6 +1,6 @@
 angular
   .module('app', [])
-  .controller('appController', appController)
+  .controller('appController', appController);
 
 function appController($scope) {
 
