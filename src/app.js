@@ -41,7 +41,7 @@ function appController($scope) {
       light: false
     },
     {
-      id: 3,
+      id: 4,
       name: 'Darth Vader',
       imageUrl: 'images/darthVader.png',
       power: 10000,
@@ -49,7 +49,7 @@ function appController($scope) {
       light: false
     },
     {
-      id: 3,
+      id: 5,
       name: 'Jango Fett',
       imageUrl: 'images/jangoFett.png',
       power: 7000,
