@@ -1,6 +1,9 @@
-angular.module('app', [])
+angular
+  .module('app', [])
+  .controller('appController', appController);
 
-.controller('appController', function($scope) {
+
+function appController($scope) {
 
   $scope.title = 'List Page';
   
@@ -54,6 +57,4 @@ angular.module('app', [])
       light: false
     },
   ]
-})
-
-;
+}
