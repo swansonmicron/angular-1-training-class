@@ -6,7 +6,7 @@ angular
   .controller('DetailController', DetailController);
 
 
-function detailConfig() {
+function detailConfig($routeProvider) {
 
 }
 
