@@ -12,7 +12,22 @@
   <div ng-controller="AppController">
     <h1>{{ title }}</h1>
     <div>
-      <!-- LIST GOES HERE: -->
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="hero in heroes">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">{{hero.name}}</div>
+            <div class="col-xs-12 col-md-6">
+              <div>Power: {{hero.power}}</div>
+              <div>Ligt: {{hero.light}}</div>
+              <div>Affilations:
+                <span ng-repeat="affiliation in hero.affiliations" >
+                {{affiliation}} 
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </body>
