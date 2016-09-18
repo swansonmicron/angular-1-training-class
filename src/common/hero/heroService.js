@@ -1,5 +1,6 @@
 angular
-  .module('hero', [])
+  .module('heroService', [
+  ])
   .factory('heroService', heroService);
 
 function heroService() {
