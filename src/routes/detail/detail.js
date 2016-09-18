@@ -15,11 +15,15 @@ function detailConfig($routeProvider) {
     });
 }
 
-function DetailController($scope, $routeParams, heroService) {
+function DetailController($scope, $routeParams, heroService, $location) {
   
   $scope.heroId = parseInt($routeParams.id);
 
   // get hero from service
   $scope.hero = heroService.get($scope.heroId);
+
+  $scope.gotoList = function() {
+    $location.path('/list');
+  }
 
 }

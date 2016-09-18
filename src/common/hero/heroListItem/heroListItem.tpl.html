@@ -1,3 +1,10 @@
-<div>
-    {{ hero }}
-</div>
+<li class="list-group-item">
+    <a ng-click="onClickHero({ hero: hero })" class="row">
+    <h4 class="col-xs-6">{{ hero.name }}</h4>
+    <div class="col-xs-6">
+        <p>Power: {{ hero.power }}</p>
+        <p>Light: {{ hero.light }}</p>
+        <p>Affiliations: <span ng-repeat="affiliation in hero.affiliations">{{ affiliation }} </span></p>
+    </div>
+    </a>
+</li>

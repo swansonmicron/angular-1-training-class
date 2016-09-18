@@ -12,7 +12,7 @@ function heroListItem() {
         },
         controller: heroListItemController,
         controllerAs: 'hero',
-        templateUrl: 'src/common/hero/heroList/heroListItem.tpl.html'
+        templateUrl: 'src/common/hero/heroListItem/heroListItem.tpl.html'
     };
 }
 

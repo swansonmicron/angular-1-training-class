@@ -14,11 +14,15 @@ function listConfig($routeProvider) {
     });
 }
 
-function ListController($scope, heroService) {
+function ListController($scope, heroService, $location) {
   
   $scope.title = 'List Page';
 
   $scope.heroes = heroService.getAll();
-  
+
+  $scope.gotoDetail = function(hero) {
+    $location.path('detail/' + hero.id);
+  };
+
 }
 
