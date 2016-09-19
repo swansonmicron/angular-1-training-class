@@ -22,6 +22,8 @@
    * Set `$scope.heroes = heroService.getAll()`
 3. `src/routes/list/list.tpl.html`
    * Move list markup from `index.html` into `list.tpl.html`
+4. `src/index.html`
+   * Add a `<div ng-view></div>` which will be the location that route templates are shown
 
 ### Check that ListController works at '/' route before continuing 
 4. `src/routes/detail/detail.js`
