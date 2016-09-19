@@ -2,10 +2,6 @@ angular
   .module('hero', [])
   .factory('heroService', heroService);
 
-function heroService() {
-  var service = {
-    getAll: getAll
-  };
   var heroes = [
       {
         id: 0,
@@ -56,6 +52,13 @@ function heroService() {
         light: false
       },
     ];
+    
+function heroService() {
+  var service = {
+    getAll: getAll
+  };
+
+
 
   function getAll() {
      

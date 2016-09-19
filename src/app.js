@@ -3,7 +3,7 @@ angular
   .controller('AppController', AppController);
 
 
-function AppController($scope,heroService ) {
+function AppController($scope, heroService ) {
 
   $scope.title = 'List Page';
   
