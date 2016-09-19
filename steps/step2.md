@@ -19,7 +19,7 @@
    * Use `$routeProvider.when('/', { ... })` to set '/' route to use `ListController` and `src/routes/list/list.tpl.html`. [See official docs](https://docs.angularjs.org/api/ngRoute/provider/$routeProvider#when)   
    * List `hero` as a dependency
    * Inject `$scope` and `heroService` into `ListController`
-   * Set `$scope.hero = heroService.getAll()`
+   * Set `$scope.heroes = heroService.getAll()`
 3. `src/routes/list/list.tpl.html`
    * Move list markup from `index.html` into `list.tpl.html`
 
