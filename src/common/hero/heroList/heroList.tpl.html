@@ -1,5 +1,8 @@
 <div>
+    <select class="form-control" ng-options="option as option.label for option in options" ng-model="selectedSide">
+        <option value=""></option>
+    </select>
     <ul class="list-group">
-        <hero-list-item hero="hero" on-click-hero="onClickHero({ hero: hero })" ng-repeat="hero in heroes"></hero-list-item>
+        <hero-list-item hero="hero" on-click-hero="onClickHero({ hero: hero })" ng-repeat="hero in heroes | filter:heroFilter"></hero-list-item>
     </ul>
 </div>
