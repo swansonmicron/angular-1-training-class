@@ -1,7 +1,11 @@
 .list-item-light {
-
+  border-left-color: #337ab7;
+  border-left-style: solid;
+  border-left-width: 30px;
 }
 
 .list-item-dark {
-  
+  border-left-color: #d9534f;
+  border-left-style: solid;
+  border-left-width: 30px;
 }
