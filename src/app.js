@@ -14,6 +14,5 @@ function appConfig($routeProvider, $locationProvider) {
     .otherwise('/');
 }
 
-function AppController($scope, heroService) {
-
+function AppController($scope) {
 }

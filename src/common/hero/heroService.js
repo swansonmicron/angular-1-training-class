@@ -3,7 +3,7 @@ angular
   ])
   .factory('heroService', heroService);
 
-function heroService() {
+function heroService($http, $q) {
   
   var heroes = [
     {
@@ -58,15 +58,34 @@ function heroService() {
 
   var service = {
     getAll: getAll,
-    get: get,
+    get: get
   };
 
   function getAll() {
     console.log('hero::heroService::getAll');
+    if (heroes.length === 0) {
+      // get heroes from data/heroes.json
+      // and set heroes to the value returned in the resonse
+      /*
+      return $http.get('data/heroes.json').then(function(res) {
+        ...
+        set global heroes and then return the array
+        ...
+      });
+      */
+    } else {
+      // return heroes in a promise
+    }
+    // REMOVE THIS
     return heroes;
   }
 
   function get(id) {
+    /*
+    return service.getAll().then(function(heroes) {
+      // move filtering here
+    }); 
+    */
     var h = heroes.filter(function(hero) {
       return hero.id === id;
     });
