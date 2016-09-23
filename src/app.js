@@ -15,7 +15,5 @@ function appConfig($routeProvider, $locationProvider) {
 }
 
 function AppController($scope, heroService) {
-  $scope.title = 'List Page';
-  
-  $scope.heroes = heroService.getAll();
+
 }
