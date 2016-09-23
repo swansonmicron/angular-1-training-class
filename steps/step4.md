@@ -15,7 +15,7 @@
    * add a new `<div class="col-xs-1">...</div>` to the row
    * inside the new row add `<span class="glyphicon glyphicon-chevron-right"></span>`
 2. `src/common/hero/heroListItem/heroListItem.css`
-   * add `border-left-color`, `border-left-style: solid`, and `border-left-width`  
+   * add `border-left-color`, `border-left-style`, and `border-left-width`  
   ```
   .list-item-(light/dark) {
     border-left-color: (blue/red);
