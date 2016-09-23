@@ -22,7 +22,7 @@
         }
     ];
 ```
-   * add a `heroFilter` function which takes a hero and returns `true` if hero.light equals `$scope.selectedSide.value`. Also returns `true` if `$scope.selectedSide` is `null` 
+   * add a `$scope.heroFilter` function which takes a hero and returns `true` if hero.light equals `$scope.selectedSide.value`. Also returns `true` if `$scope.selectedSide` is `null` 
 2. `src/common/heroList/heroList.tpl.html`
    * add `select` element to template and use `ng-options` to populate
    * add `form-control` class to `select`
