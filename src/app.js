@@ -9,7 +9,6 @@ angular
   .controller('AppController', AppController);
 
 function appConfig($routeProvider, $locationProvider) {
-  $locationProvider.html5Mode(true);
   $routeProvider
     .otherwise('/');
 }

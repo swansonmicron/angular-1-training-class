@@ -18,7 +18,11 @@ function ListController($scope, heroService, $location) {
   
   $scope.title = 'List Page';
 
-  $scope.heroes = heroService.getAll();
+  $scope.heroes = [];
+
+  heroService.getAll().then(function(heroes) {
+    $scope.heroes = heroes;
+  });
 
   $scope.gotoDetail = function(hero) {
     $location.path('detail/' + hero.id);
