@@ -6,7 +6,7 @@
 </div>
 <div class="col-xs-2">
     <h1>
-    <a ng-click="onClose()" class="btn btn-primary">X</a>
+    <a ng-click="onClose()" class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span></a>
     </h1>
 </div>
 </div>
@@ -16,7 +16,7 @@
     <img ng-src="{{ hero.imageUrl }}" alt="">
 </div>
 <div class="col-xs-6">
-    <p>Power: {{ hero.power }}</p>
+    <p>Power: <input type="number" ng-model="hero.power"></p>
     <p>Light: {{ hero.light }}</p>
     <p>Affiliations: <span ng-repeat="affiliation in hero.affiliations">{{ affiliation }} </span></p>
 </div>

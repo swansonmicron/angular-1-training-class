@@ -1,3 +1,7 @@
-<ul class="list-group">
-    <hero-list-item hero="hero" on-click-hero="onClickHero({ hero: hero })" ng-repeat="hero in heroes"></hero-list-item>
-</ul>
+<div>
+    <select class="form-control" ng-options="option as option.label for option in options" ng-model="selectedSide">
+    </select>
+    <ul class="list-group">
+        <hero-list-item hero="hero" on-click-hero="onClickHero({ hero: hero })" ng-repeat="hero in heroes | filter:heroFilter | orderBy:'-power'"></hero-list-item>
+    </ul>
+</div>

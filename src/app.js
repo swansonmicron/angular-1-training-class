@@ -9,13 +9,9 @@ angular
   .controller('AppController', AppController);
 
 function appConfig($routeProvider, $locationProvider) {
-  $locationProvider.html5Mode(true);
   $routeProvider
     .otherwise('/');
 }
 
-function AppController($scope, heroService) {
-  $scope.title = 'List Page';
-  
-  $scope.heroes = heroService.getAll();
+function AppController($scope) {
 }

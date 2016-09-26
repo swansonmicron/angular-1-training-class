@@ -20,7 +20,11 @@ function DetailController($scope, $routeParams, heroService, $location) {
   $scope.heroId = parseInt($routeParams.id);
 
   // get hero from service
-  $scope.hero = heroService.get($scope.heroId);
+  $scope.hero = {};
+
+  heroService.get($scope.heroId).then(function(hero) {
+    $scope.hero = hero;
+  });
 
   $scope.gotoList = function() {
     $location.path('/list');
