@@ -1,7 +1,10 @@
 <div>
     <div class="row">
-        <div class="col-xs-offset-8 col-xs-4">
-            <select class="form-control" ng-options="option as option.label for option in options" ng-model="selectedSide"></select>
+        <div class="col-xs-offset-8 col-xs-4 form-inline">
+            <div class="form-group">
+                <label for="force-select">Force</label>
+                <select id="force" class="form-control" ng-options="option as option.label for option in options" ng-model="selectedSide"></select>
+            </div>
         </div>
     </div>
     <ul class="list-group">
