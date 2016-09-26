@@ -16,9 +16,12 @@ function heroList() {
 }
 
 function heroListController($scope) {
-    $scope.selectedSide = null;
 
     $scope.options = [
+        {
+            label: 'All',
+            value: null
+        },
         {
             label: 'Light',
             value: true
@@ -29,8 +32,10 @@ function heroListController($scope) {
         }
     ];
 
+    $scope.selectedSide = $scope.options[0];    
+
     $scope.heroFilter = function(hero) {
-        if ($scope.selectedSide === null) {
+        if ($scope.selectedSide.value === null) {
             // if selectedSide is null, we should show all values
             return true;
         } else {
