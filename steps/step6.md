@@ -8,5 +8,5 @@
 
 ### Things to Do:
 1. `src/common/hero/heroDetail/heroDetail.tpl.html`
-   * change the `hero.power` display to an `input` element with `ng-model="hero.light"`
+   * change the `hero.power` display to an `input` element with `ng-model="hero.power"`
 
