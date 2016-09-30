@@ -1,7 +1,8 @@
 angular
   .module('list', [
     'ngRoute',
-    'hero'
+    'hero',
+    'squad'
   ])
   .config(listConfig)
   .controller('ListController', ListController);
@@ -14,7 +15,7 @@ function listConfig($routeProvider) {
     });
 }
 
-function ListController($scope, heroService, $location) {
+function ListController($scope, heroService, squadService, $location) {
   
   $scope.title = 'List Page';
 
