@@ -19,10 +19,16 @@ function ListController($scope, heroService, squadService, $location) {
   
   $scope.title = 'List Page';
   $scope.heroes = [];
-  $scope.squadHeroes = squadService.getAll();
+  $scope.squadHeroes = [];
 
   heroService.getAll().then(function(heroes) {
     $scope.heroes = heroes;
+  });
+
+  $scope.$watch(function() {
+    return squadService.getAll();
+  }, function(newVal, oldVal) {
+    $scope.squadHeroes = newVal;
   });
 
   $scope.gotoDetail = function(hero) {
