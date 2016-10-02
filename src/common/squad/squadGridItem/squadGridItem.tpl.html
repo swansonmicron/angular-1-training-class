@@ -1,4 +1,4 @@
-<div class="row squad-grid-item-container">
+<div class="row squad-grid-item-container" ng-class="{'squad-light': hero.light, 'squad-dark': !hero.light}">
     <div class="col-xs-10 squad-grid-item-content" ng-click="onClick(hero)">
         <div><img class="grid-image" ng-src="{{ hero.imageUrl }}"/></div>
         <div>{{ hero.name }}</div>

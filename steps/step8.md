@@ -28,6 +28,7 @@
    * when squad member clicked, call the `$scope.onClickHero(hero)` directive function with the clicked hero as argument
      remember that when we call an isolate scope function that has an argument, we need to call it like `$scope.onClickHero({ hero: hero })`
    * when squad member removed, call the `squadService.removeHero(hero)` function with the removed hero as argument
+   * border should be red for dark, blue for light
 
 3. `src/common/squad/squadGrid/*`
    * create a squadGrid directive that has an input of `heroes` and an `onClickHero` function output
