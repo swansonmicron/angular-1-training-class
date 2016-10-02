@@ -1,7 +1,7 @@
 # Angular Training Course - Zerrtech
 -----
 
-## Step 8: 
+## Step 9: 
 
 ### Changed Files:
 * `src/common/squad/squadService.js`
