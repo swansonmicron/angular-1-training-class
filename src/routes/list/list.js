@@ -20,15 +20,20 @@ function ListController($scope, heroService, squadService, $location) {
   $scope.title = 'List Page';
   $scope.heroes = [];
   $scope.squadHeroes = [];
+  $scope.noSquadHeroes = [];
 
   heroService.getAll().then(function(heroes) {
     $scope.heroes = heroes;
+    $scope.noSquadHeroes = heroes;
   });
 
   $scope.$watch(function() {
     return squadService.getAll();
   }, function(newVal, oldVal) {
     $scope.squadHeroes = newVal;
+    $scope.noSquadHeroes = $scope.heroes.filter(function(hero) {
+      return !squadService.contains(hero);
+    });
   });
 
   $scope.gotoDetail = function(hero) {
