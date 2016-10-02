@@ -2,10 +2,13 @@ angular.module('squadService', [])
 .factory('squadService', squadService);
 
 function squadService() {
-    var heroes = [];
+
+    // ensure none of the methods change the reference of
+    // heroes, they modify the array in place
     var numMaxHeroes = 4;
 
     var service = {
+        heroes: [],
         getAll: getAll,
         clearAll: clearAll,
         addHero: addHero,
@@ -19,14 +22,31 @@ function squadService() {
      * Return an array of heroes
      */
     function getAll() {
-        return heroes;
+        return service.heroes;
     }
 
     /**
      * Clear the list of heroes
      */
     function clearAll() {
-        heroes = [];
+        while (service.heroes.length > 0) {
+            service.heroes.splice(0, 1);
+        }
+    }
+
+    /**
+     * Return the index of a hero within the squad
+     * 
+     * @param {any} hero
+     * @returns {integer} Index of hero within squad, 0+, -1 if not found
+     */
+    function _getHeroIndex(hero) {
+        for (var i = 0; i < service.heroes.length; i++) {
+            if (service.heroes[i] === hero) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -35,7 +55,14 @@ function squadService() {
      * @param {any} hero
      */
     function addHero(hero) {
-        heroes.push(hero);
+        // make sure hero is not already in squad
+        var heroIndex = _getHeroIndex(hero);
+        var heroNotInSquad =  (heroIndex === -1 ? true : false);
+        // also check to make sure we have not hit
+        // max heroes in squad
+        if (heroNotInSquad && !service.isFull()) {
+            service.heroes.push(hero);
+        }
     }
 
     /**
@@ -44,9 +71,11 @@ function squadService() {
      * @param {any} hero
      */
     function removeHero(hero) {
-        heroes = heroes.filter(function(squadHero) {
-            return !(squadHero === hero);
-        });
+        // find hero and remove from array
+        var heroIndex = _getHeroIndex(hero);
+        if (heroIndex !== -1) {
+            service.heroes.splice(heroIndex, 1);
+        }
     }
 
     /**
@@ -73,7 +102,7 @@ function squadService() {
      * @returns {boolean} True if squad is full, false if not
      */
     function isFull() {
-        return (heroes.length === numMaxHeroes);
+        return (service.heroes.length === numMaxHeroes);
     }
 
     return service;

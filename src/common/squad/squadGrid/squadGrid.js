@@ -13,5 +13,7 @@ function squadGrid() {
 }
 
 function squadGridController($scope) {
-
+    $scope.handleHeroClick = function(hero) {
+        $scope.onClickHero({ hero: hero });
+    };
 }

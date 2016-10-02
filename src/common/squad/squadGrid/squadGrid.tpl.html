@@ -1,3 +1,5 @@
 <div class="row squad-grid-container">
-    <!-- each squad-grid-item should go here -->
+    <div class="col-xs-6" ng-repeat="hero in heroes">
+        <squad-grid-item hero="hero" on-click-hero="handleHeroClick(hero)"></squad-grid-item>
+    </div>
 </div>

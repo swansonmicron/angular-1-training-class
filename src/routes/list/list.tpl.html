@@ -1,6 +1,11 @@
   <div class="container">
     <h1>{{ title }}</h1>
-    <div>
-      <hero-list heroes="heroes" on-click-hero="gotoDetail(hero)"></hero-list>
+    <div class="row">
+      <div class="col-xs-6">
+        <hero-list heroes="heroes" on-click-hero="addHeroToSquad(hero)"></hero-list>
+      </div>
+      <div class="col-xs-6">
+        <squad-grid heroes="squadHeroes" on-click-hero="gotoDetail(hero)"></squad-grid>
+      </div>
     </div>
   </div>

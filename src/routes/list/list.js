@@ -18,8 +18,8 @@ function listConfig($routeProvider) {
 function ListController($scope, heroService, squadService, $location) {
   
   $scope.title = 'List Page';
-
   $scope.heroes = [];
+  $scope.squadHeroes = squadService.getAll();
 
   heroService.getAll().then(function(heroes) {
     $scope.heroes = heroes;
@@ -27,6 +27,10 @@ function ListController($scope, heroService, squadService, $location) {
 
   $scope.gotoDetail = function(hero) {
     $location.path('detail/' + hero.id);
+  };
+
+  $scope.addHeroToSquad = function(hero) {
+    squadService.addHero(hero);
   };
 
 }

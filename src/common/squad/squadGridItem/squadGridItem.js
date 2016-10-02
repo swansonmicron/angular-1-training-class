@@ -4,6 +4,13 @@ angular.module('squadGridItem', ['squadService'])
 
 function squadGridItemController($scope, squadService) {
     // when a hero is removed from squad, call squadService.removeHero(hero)
+    $scope.removeHeroFromSquad = function(hero) {
+        squadService.removeHero(hero);
+    };
+
+    $scope.onClick = function(hero) {
+        $scope.onClickHero({ hero: hero });
+    };
 }
 
 function squadGridItem() {

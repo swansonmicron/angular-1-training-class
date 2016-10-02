@@ -25,14 +25,15 @@
 
 2. `src/common/squad/squadGridItem/*`
    * create a squadGridItem directive that has an input of `hero` and an `onClickHero` function output
-   * when squad member clicked, just call the `$scope.onClickHero(hero)` function with the clicked hero as argument
+   * when squad member clicked, call the `$scope.onClickHero(hero)` directive function with the clicked hero as argument
+     remember that when we call an isolate scope function that has an argument, we need to call it like `$scope.onClickHero({ hero: hero })`
    * when squad member removed, call the `squadService.removeHero(hero)` function with the removed hero as argument
 
 3. `src/common/squad/squadGrid/*`
    * create a squadGrid directive that has an input of `heroes` and an `onClickHero` function output
    * within the template, we will do an `ng-repeat` over heroes and pass each into directive `squad-grid-item` and pass in each hero and a click handler function using `on-click-hero` attribute
    * to create the grid effect, if we consider that we just want to display 2 columns, we can put every `squad-grid-item` in a container that has 6 grid units
-   * when the function you passed into `on-click-hero` is called, we just pass it up the chain, calling our own `$scope.onClickHero(hero)`
+   * when the function you passed into `on-click-hero` is called, we just pass it up the chain, calling our own `$scope.onClickHero({ hero: hero })`
    * display a little note to the user when there are no heroes in the squad by using an `ng-if` directive to show some HTML when `$scope.heroes.length === 0`
 
 4. `src/common/squad/squad.js`

@@ -1,3 +1,13 @@
 .squad-grid-item-container {
     border: 1px solid #0000ff;
+    padding: 10px;
+}
+
+.squad-grid-item-content {
+    text-align: center;
+}
+
+.grid-image {
+    width: 150px;
+    height: 150px;
 }
