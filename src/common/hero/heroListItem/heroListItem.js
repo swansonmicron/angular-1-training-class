@@ -17,4 +17,5 @@ function heroListItem() {
 
 function heroListItemController($scope) {
 
+
 }
